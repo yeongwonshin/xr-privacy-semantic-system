@@ -1,0 +1,10 @@
+risk_levels:
+  low:
+    range: [0.0, 0.25]
+    action: allow_cloud
+  medium:
+    range: [0.25, 0.65]
+    action: allow_cloud_with_audit
+  high:
+    range: [0.65, 1.0]
+    action: block_cloud_and_request_edge_summary

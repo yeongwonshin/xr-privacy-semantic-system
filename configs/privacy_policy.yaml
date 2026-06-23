@@ -1,0 +1,26 @@
+policy_id: xr_privacy_default_v1
+allow_raw_frame_upload: false
+max_risk_for_cloud: 0.65
+sensitive_objects:
+  - face
+  - worker_face
+  - credit_card
+  - id_card
+  - license_plate
+  - screen
+  - medical_chart
+  - student_face
+  - patient_wristband
+pii_text_patterns:
+  - email
+  - phone_kr
+  - credit_card
+  - resident_id_kr_like
+default_actions:
+  sensitive_object: suppress_object_region
+  pii_text: redact_text
+  high_risk_packet: block_cloud_upload
+retention:
+  raw_frame: none
+  semantic_packet_days: 30
+  audit_log_days: 365

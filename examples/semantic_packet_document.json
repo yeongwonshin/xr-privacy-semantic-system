@@ -1,0 +1,20 @@
+{
+  "packet_id": "demo-document-packet",
+  "device_id": "demo-glasses-001",
+  "session_id": "demo-session-001",
+  "mode": "document_assist",
+  "user_intent": "이 안전 매뉴얼 내용을 요약해줘",
+  "raw_frame_retained": false,
+  "extracted_texts": [
+    {"text": "ACME Safety Manual Section 3", "confidence": 0.93, "redacted": false, "pii_types": []},
+    {"text": "Call supervisor at [PHONE_KR_REDACTED] before opening the panel", "confidence": 0.92, "redacted": true, "pii_types": ["phone_kr"]}
+  ],
+  "detected_objects": [],
+  "layout_regions": [],
+  "privacy_actions": [
+    {"action": "redact_text", "reason": "phone_kr", "target": "Call supervisor at [PHONE_KR_REDACTED] before opening the panel", "policy_id": "pii.regex.v1"}
+  ],
+  "semantic_summary": "mode=document_assist | texts=ACME Safety Manual Section 3; Call supervisor at [PHONE_KR_REDACTED] before opening the panel",
+  "risk_score": 0.1,
+  "metadata": {"sdk_version": "0.1.0"}
+}

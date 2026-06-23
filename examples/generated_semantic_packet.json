@@ -1,0 +1,96 @@
+{
+  "packet_id": "d8b5fd8d-0fef-4719-9876-cddab2a9b036",
+  "device_id": "demo-glasses-001",
+  "session_id": "1997564a-6a32-4a6a-9009-66c673b9ab3a",
+  "mode": "document_assist",
+  "user_intent": "이 안전 매뉴얼 내용을 요약해줘",
+  "created_at": "2026-06-23T17:40:03.878510Z",
+  "raw_frame_retained": false,
+  "extracted_texts": [
+    {
+      "text": "ACME Safety Manual Section 3",
+      "confidence": 0.93,
+      "bbox": {
+        "x": 0.05,
+        "y": 0.05,
+        "w": 0.85,
+        "h": 0.08
+      },
+      "redacted": false,
+      "pii_types": []
+    },
+    {
+      "text": "Call supervisor at [PHONE_KR_REDACTED] before opening the panel",
+      "confidence": 0.93,
+      "bbox": {
+        "x": 0.05,
+        "y": 0.15000000000000002,
+        "w": 0.85,
+        "h": 0.08
+      },
+      "redacted": true,
+      "pii_types": [
+        "phone_kr"
+      ]
+    },
+    {
+      "text": "Voltage limit: 220V",
+      "confidence": 0.93,
+      "bbox": {
+        "x": 0.05,
+        "y": 0.25,
+        "w": 0.85,
+        "h": 0.08
+      },
+      "redacted": false,
+      "pii_types": []
+    }
+  ],
+  "detected_objects": [],
+  "layout_regions": [
+    {
+      "role": "title",
+      "bbox": {
+        "x": 0.05,
+        "y": 0.05,
+        "w": 0.9,
+        "h": 0.1
+      },
+      "text_ref_ids": []
+    },
+    {
+      "role": "body",
+      "bbox": {
+        "x": 0.05,
+        "y": 0.18,
+        "w": 0.9,
+        "h": 0.55
+      },
+      "text_ref_ids": []
+    },
+    {
+      "role": "safety_warning",
+      "bbox": {
+        "x": 0.05,
+        "y": 0.76,
+        "w": 0.9,
+        "h": 0.16
+      },
+      "text_ref_ids": []
+    }
+  ],
+  "privacy_actions": [
+    {
+      "action": "redact_text",
+      "reason": "phone_kr",
+      "target": "Call supervisor at [PHONE_KR_REDACTED] before opening the panel",
+      "policy_id": "pii.regex.v1"
+    }
+  ],
+  "semantic_summary": "mode=document_assist | texts=ACME Safety Manual Section 3; Call supervisor at [PHONE_KR_REDACTED] before opening the panel; Voltage limit: 220V | layout=title, body, safety_warning",
+  "risk_score": 0.25,
+  "metadata": {
+    "sdk_version": "0.1.0",
+    "pipeline": "mockable-edge-runtime"
+  }
+}

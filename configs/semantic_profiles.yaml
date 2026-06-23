@@ -1,0 +1,17 @@
+profiles:
+  industrial_maintenance:
+    allowed_modes: [objects_only, task_guidance, document_assist]
+    preserve: [tool_label, warning_label, manual_text, object_relation]
+    suppress: [face, id_card, phone_kr, credit_card]
+  healthcare_training:
+    allowed_modes: [document_assist, layout_only]
+    preserve: [procedure_step, device_label, anonymized_measurement]
+    suppress: [patient_name, patient_id, face, medical_chart]
+  education_xr:
+    allowed_modes: [text_only, layout_only, document_assist]
+    preserve: [problem_text, board_layout, equation]
+    suppress: [student_face, phone_kr, email]
+  logistics_pick_and_place:
+    allowed_modes: [objects_only, task_guidance]
+    preserve: [part_id, shelf_label, box_count, hazard_label]
+    suppress: [worker_face, license_plate]
